@@ -1,9 +1,10 @@
 # practice-c
 part of my daily plan for studying C
 
-# gets()函数
+### gets()函数
 ```c
-/*parmater : char *
+/*
+  parmater : char *
   return : char *
 */
 (char *) gets(char *);
