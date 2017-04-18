@@ -9,10 +9,16 @@ typedef struct binaryTree {
 
 void createBinTree(binaryNode *);
 
+int main(void) {
+	binaryNode * node;
+	createBinTree(node);
+	return 0;
+}
+
 void createBinTree(binaryNode * node) {
 	int n;
 	scanf("%d",&n);
-	node = (binaryTree *)malloc(sizeof(binaryNode));
+	node = (binaryNode *)malloc(sizeof(binaryNode));
 	node->data = n;
 	createBinTree(node->left);
 	createBinTree(node->right);
