@@ -5,27 +5,25 @@ typedef struct binaryTree {
 	int data;
 	struct binaryTree * left;
 	struct binaryTree * right;
-}binaryNode;
+}binaryNode,*biTree;
 
-void createBinTree(binaryNode *);
+void createBinTree(biTree*);
 
 int main(void) {
-	binaryNode * node;
+	biTree node;
 	printf("%d\n",node->data);
-	createBinTree(node);
+	createBinTree(&node);
 	printf("%d\n",node->data);
 	return 0;
 }
 
-void createBinTree(binaryNode * node) {
+void createBinTree(biTree *node) {
 	int n;
 	scanf("%d",&n);
-	node = (binaryNode *)malloc(sizeof(binaryNode));
-	node->data = n;
-	node->left=NULL;
-	node->right=NULL;
-	//createBinTree(node->left);
-	//createBinTree(node->right);
+	*node = (binaryNode *)malloc(sizeof(binaryNode));
+	(*node)->data = n;
+	createBinTree(&(*node)->left);
+	createBinTree(&(*node)->right);
 }
 
 
