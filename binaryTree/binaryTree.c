@@ -5,19 +5,19 @@ typedef struct binaryTree {
 	int data;
 	struct binaryTree * left;
 	struct binaryTree * right;
-}binaryNode,*biTree;
+}binaryNode;
 
-void createBinTree(biTree*);
+void createBinTree(binaryNode **);
 
 int main(void) {
-	biTree node;
-	printf("%d\n",node->data);
-	createBinTree(&node);
+	binaryNode ** node=(binaryNode**)malloc(sizeof(binaryNode*));
+	printf("%d\n",*node->data);
+	createBinTree(node);
 	printf("%d\n",node->data);
 	return 0;
 }
 
-void createBinTree(biTree *node) {
+void createBinTree(binaryNode ** node) {
 	int n;
 	scanf("%d",&n);
 	*node = (binaryNode *)malloc(sizeof(binaryNode));
