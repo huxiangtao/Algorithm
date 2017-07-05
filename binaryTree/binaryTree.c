@@ -10,9 +10,9 @@ typedef struct binaryTree {
 void createBinTree(binaryNode **);
 
 int main(void) {
-	binaryNode ** node=(binaryNode**)malloc(sizeof(binaryNode*));
+	binaryNode * node;
 	printf("%d\n",*node->data);
-	createBinTree(node);
+	createBinTree(&node);
 	printf("%d\n",node->data);
 	return 0;
 }
