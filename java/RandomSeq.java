@@ -1,6 +1,12 @@
 public class RandomSeq {
 	public static void main(String[] args) {
-		int N = 10;
-		StdOut.printf("%5d\n",N);
+		int N = 0;
+		double sum = 0.0;
+		while(!StdIn.isEmpty()) {
+			sum += StdIn.readDouble();
+			N++;
+		}
+		double avg = sum / N;
+		StdOut.printf("Average is %.4f\n",avg);
 	}
 }
