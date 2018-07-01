@@ -1,5 +1,5 @@
 # practice-c
-part of my daily plan for studying C
+part of my daily plan for Algorithm by C
 
 #### gets()函数
 ```c
