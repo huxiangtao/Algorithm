@@ -2,6 +2,7 @@
 
 typedef int Status;
 typedef int ElemType;
+typedef int Elliot;
 
 typedef struct LNode{
 	ElemType data;
